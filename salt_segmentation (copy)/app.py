@@ -50,8 +50,8 @@ def submit_file():
             img.save("static/images/result.png")
             # plt.savefig()
             # full_filename = os.path.join(app.config['UPLOAD_FOLDER'], "result.png")
-            full_filename = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-            flash(full_filename)
+#             full_filename = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+            flash(filename)
             return redirect('/')
 
 
