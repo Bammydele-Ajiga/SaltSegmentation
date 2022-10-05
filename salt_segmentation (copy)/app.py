@@ -38,6 +38,7 @@ def submit_file():
         if file:
             filename = secure_filename(file.filename)  #Use this werkzeug method to secure filename. 
             file.save(os.path.join(app.config['UPLOAD_FOLDER'],filename))
+            filename =os.path.join(app.config['UPLOAD_FOLDER'], filename)
             #getPrediction(filename)
             res = get_pred(filename)
             # flash(res)
