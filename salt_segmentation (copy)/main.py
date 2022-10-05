@@ -13,7 +13,7 @@ def get_pred(filepath):
   inputs = resize(input, (64, 64, 1), mode='constant', preserve_range=True)
   X_test[0] = inputs
   print(input.shape)
-  model = load_model('/home/bams/Downloads/salt _seg_model/segmentation')
+  model = load_model('segmentation')
   result = model.predict(X_test, verbose=1)
   result_t = (result > 0.5).astype(np.uint8)
   tmp = np.squeeze(result).astype(np.float32)
